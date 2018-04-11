@@ -40,7 +40,7 @@ class m180411_120000_admin extends Migration
                     null,
                     'admin',
                     'BAscckbHf91npOYsxfv6KCxY-nqIM5M3',
-                    '$2y$13$9x9viOG1CM.C1KmozA2e7eshzVT9uHcxpaP1M82hjT/SbJjNqRYSe',
+                    '$2y$13$Vvz4uhHGXNKyqTdzbBvq/OUkfrw3yLqQ108qemPF5Il2lr.GgEl9K',
                     NULL,
                     'czc@czc.com',
                     10,
