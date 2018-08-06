@@ -21,3 +21,6 @@ yii migrate
 admin
 
 111111
+
+
+运行中可以通过 php yii backup/backup all来备份数据库，php yi backup/up来使用备份
