@@ -1,6 +1,8 @@
 1、下载本项目到本地，并进入到项目根目录
 
-2、composer install
+2、composer instal
+
+   执行完毕后，如果没有自动初始化则执行php init命令手动初始化
 
 3、修改common/config/main-local.php，设置数据库信息
 
