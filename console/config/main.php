@@ -20,6 +20,9 @@ return [
             'class' => 'yii\console\controllers\FixtureController',
             'namespace' => 'common\fixtures',
           ],
+       'backup' => [
+            'class' => 'e282486518\migration\ConsoleController',
+        ]
     ],
     'components' => [
         'log' => [
