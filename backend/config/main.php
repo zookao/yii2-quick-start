@@ -53,6 +53,12 @@ return [
         'assetManager' => [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,// do not publish the bundle
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js' => [
+                        'js/jquery.min.js',
+                    ],
                     'jsOptions' => [
                         'position' => \yii\web\View::POS_HEAD,
                     ]
