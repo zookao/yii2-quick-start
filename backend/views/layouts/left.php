@@ -10,12 +10,9 @@
             <div class="pull-left info">
                 <p><?=Yii::$app->user->identity->username;?></p>
 
-                <a href="/"><i class="fa fa-circle text-success"></i> 在线</a>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
-
-
-
 <?php
 use mdm\admin\components\MenuHelper;
 $callback = function($menu){
@@ -41,7 +38,7 @@ $callback = function($menu){
 };
 //这里我们对一开始写的菜单menu进行了优化
 echo dmstr\widgets\Menu::widget( [
-    'options' => ['class' => 'sidebar-menu'],
+    'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
     'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback),
 ] ); ?>
     </section>
