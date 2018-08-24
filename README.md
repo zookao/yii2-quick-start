@@ -2,8 +2,28 @@
 2. composer instal
 
    执行完毕后，如果没有自动初始化则执行`php init`命令手动初始化
-   
-3. `php yii backup/up`导入数据
+
+3.
+修改
+```
+/www/wwwroot/yii2frame/vendor/e282486518/yii2-console-migration/components/MigrateCreate.php
+```
+中的
+```
+use yii\base\view;
+```
+为
+```
+use yii\base\View as view;
+```
+以后可以通过 php yii backup/backup all来备份数据库，php yi backup/up来使用备份
+
+>>> 该项目的作者没有正确区分大小写
+
+```
+php yii backup/up
+```
+导入数据
 
 ~~yii migrate --migrationPath=@yii/rbac/migrations~~
 
@@ -21,8 +41,3 @@ admin
 
 yii2frame_admin
 ```
-修改
-`/www/wwwroot/yii2frame/vendor/e282486518/yii2-console-migration/components/MigrateCreate.php`
-中的
-`use yii\base\view;`为`use yii\base\View as view;`
-以后可以通过 php yii backup/backup all来备份数据库，php yi backup/up来使用备份
