@@ -19,11 +19,11 @@
 ==========
 
 账号密码
-
+```
 admin
 
-111111
-
+yii2frame_admin
+```
 修改
 `/www/wwwroot/yii2frame/vendor/e282486518/yii2-console-migration/components/MigrateCreate.php`
 中的

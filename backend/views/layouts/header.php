@@ -17,7 +17,7 @@ use yii\helpers\Html;
                 <li >
                      <?= Html::a(
                         '修改密码',
-                        ['/admin-user/change-password'],
+                        ['/site/change-password'],
                         [ 'class' => 'btn  ']
                     ) ?>
                 </li>

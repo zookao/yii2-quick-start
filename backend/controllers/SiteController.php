@@ -6,10 +6,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use backend\models\LoginForm;
+use backend\models\ChangePasswordForm;
 
-/**
- * Site controller
- */
 class SiteController extends Controller
 {
     /**
@@ -26,7 +24,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','change-password'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -96,5 +94,24 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    /**
+     * [actionChangePassword 管理员修改密码]
+     */
+    public function actionChangePassword()
+    {
+        if (Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+        $model = new ChangePasswordForm();
+        if ($model->load(Yii::$app->getRequest()->post()) && $model->change()) {
+            Yii::$app->session->setFlash('success','密码修改成功，重新登录生效');
+            return $this->goHome();
+        }
+
+        return $this->render('change-password', [
+                'model' => $model,
+        ]);
     }
 }
