@@ -50,6 +50,15 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'jsOptions' => [
+                        'position' => \yii\web\View::POS_HEAD,
+                    ]
+                ],
+            ],
+        ],
     ],
     'params' => $params,
     'as access' => [
