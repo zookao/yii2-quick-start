@@ -20,6 +20,7 @@ use yii\base\View as view;
 
 >>> 该项目的作者没有正确区分大小写
 
+4.
 ```
 php yii backup/up
 ```
@@ -31,7 +32,7 @@ php yii backup/up
 
 ~~yii migrate~~
 
-4. 修改common/config/main-local.php，设置数据库信息
+5. 修改common/config/main-local.php，设置数据库信息
 
 ==========
 
