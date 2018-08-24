@@ -2,7 +2,7 @@
 
 2、composer instal
 
-   执行完毕后，如果没有自动初始化则执行php init命令手动初始化
+   执行完毕后，如果没有自动初始化则执行`php init`命令手动初始化
 
 3、修改common/config/main-local.php，设置数据库信息
 
