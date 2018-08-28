@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m180824_032226_auth_rule extends Migration
+class m180828_031441_auth_rule extends Migration
 {
     public function up()
     {
