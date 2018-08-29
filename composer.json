@@ -38,13 +38,13 @@
     "config": {
         "process-timeout": 1800,
         "fxp-asset": {
-            "enabled": true
+            "enabled": false
         }
     },
     "repositories": {
-        "packagist": {
+        {
             "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
+            "url": "https://asset-packagist.org"
         }
     },
     "scripts": {
