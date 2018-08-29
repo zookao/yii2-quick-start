@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m180828_031441_menu extends Migration
+class m180829_005146_menu extends Migration
 {
     public function up()
     {
@@ -24,16 +24,17 @@ class m180828_031441_menu extends Migration
         $this->createIndex('parent','{{%menu}}','parent',0);
         
         /* 外键约束设置 */
-        $this->addForeignKey('fk_menu_0435_00','{{%menu}}', 'parent', '{{%menu}}', 'id', 'CASCADE', 'CASCADE' );
+        $this->addForeignKey('fk_menu_336_00','{{%menu}}', 'parent', '{{%menu}}', 'id', 'CASCADE', 'CASCADE' );
         
         /* 表数据 */
-        $this->insert('{{%menu}}',['id'=>'1','name'=>'权限相关','parent'=>NULL,'route'=>NULL,'order'=>NULL,'data'=>'{\"icon\":\"gears\"}']);
+        $this->insert('{{%menu}}',['id'=>'1','name'=>'权限相关','parent'=>NULL,'route'=>NULL,'order'=>'10','data'=>'{\"icon\":\"gears\"}']);
         $this->insert('{{%menu}}',['id'=>'2','name'=>'权限分配','parent'=>'1','route'=>'/admin/assignment/index','order'=>NULL,'data'=>'{\"icon\":\"arrows-alt\"}']);
         $this->insert('{{%menu}}',['id'=>'3','name'=>'权限管理','parent'=>'1','route'=>'/admin/permission/index','order'=>NULL,'data'=>'{\"icon\":\"sitemap\"}']);
         $this->insert('{{%menu}}',['id'=>'4','name'=>'菜单管理','parent'=>'1','route'=>'/admin/menu/index','order'=>NULL,'data'=>'{\"icon\":\"tasks\"}']);
         $this->insert('{{%menu}}',['id'=>'5','name'=>'规则管理','parent'=>'1','route'=>'/admin/rule/index','order'=>NULL,'data'=>'{\"icon\":\"plug\"}']);
         $this->insert('{{%menu}}',['id'=>'6','name'=>'角色管理','parent'=>'1','route'=>'/admin/role/index','order'=>NULL,'data'=>'{\"icon\":\"user-circle\"}']);
         $this->insert('{{%menu}}',['id'=>'7','name'=>'路由管理','parent'=>'1','route'=>'/admin/route/index','order'=>NULL,'data'=>'{\"icon\":\"link\"}']);
+        $this->insert('{{%menu}}',['id'=>'8','name'=>'设置','parent'=>NULL,'route'=>'/settings/default/index','order'=>'9','data'=>'{\"icon\":\"cog\"}']);
         
         /* 设置外键约束 */
         $this->execute('SET foreign_key_checks = 1;');

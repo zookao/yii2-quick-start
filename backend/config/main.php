@@ -15,8 +15,15 @@ return [
         'admin' => [
             'class' => 'mdm\admin\Module',
         ],
+        'settings' => [
+            'class' => 'pheme\settings\Module',
+            'sourceLanguage' => 'zh_CN'
+        ],
     ],
     'components' => [
+        'settings' => [
+            'class' => 'pheme\settings\components\Settings'
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],

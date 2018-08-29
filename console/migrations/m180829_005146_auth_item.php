@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m180828_031441_auth_item extends Migration
+class m180829_005146_auth_item extends Migration
 {
     public function up()
     {
@@ -26,7 +26,7 @@ class m180828_031441_auth_item extends Migration
         $this->createIndex('idx-auth_item-type','{{%auth_item}}','type',0);
         
         /* 外键约束设置 */
-        $this->addForeignKey('fk_auth_rule_0374_00','{{%auth_item}}', 'rule_name', '{{%auth_rule}}', 'name', 'CASCADE', 'CASCADE' );
+        $this->addForeignKey('fk_auth_rule_3286_00','{{%auth_item}}', 'rule_name', '{{%auth_rule}}', 'name', 'CASCADE', 'CASCADE' );
         
         /* 表数据 */
         $this->insert('{{%auth_item}}',['name'=>'/*','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
@@ -100,7 +100,16 @@ class m180828_031441_auth_item extends Migration
         $this->insert('{{%auth_item}}',['name'=>'/gii/default/index','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080481','updated_at'=>'1535080481']);
         $this->insert('{{%auth_item}}',['name'=>'/gii/default/preview','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
         $this->insert('{{%auth_item}}',['name'=>'/gii/default/view','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/*','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/*','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/create','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/delete','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/index','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/toggle','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/update','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
+        $this->insert('{{%auth_item}}',['name'=>'/settings/default/view','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
         $this->insert('{{%auth_item}}',['name'=>'/site/*','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
+        $this->insert('{{%auth_item}}',['name'=>'/site/change-password','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535503555','updated_at'=>'1535503555']);
         $this->insert('{{%auth_item}}',['name'=>'/site/error','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
         $this->insert('{{%auth_item}}',['name'=>'/site/index','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
         $this->insert('{{%auth_item}}',['name'=>'/site/login','type'=>'2','description'=>NULL,'rule_name'=>NULL,'data'=>NULL,'created_at'=>'1535080482','updated_at'=>'1535080482']);
