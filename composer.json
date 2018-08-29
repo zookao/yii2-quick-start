@@ -42,9 +42,13 @@
         }
     },
     "repositories": {
-        {
+        "0": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
         }
     },
     "scripts": {
