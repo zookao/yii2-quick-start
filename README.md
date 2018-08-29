@@ -2,8 +2,8 @@
 2. composer instal
 
    执行完毕后，如果没有自动初始化则执行`php init`命令手动初始化
-
-3.
+3. 修改common/config/main-local.php，设置数据库信息
+4.
 修改
 ```
 /www/wwwroot/yii2frame/vendor/e282486518/yii2-console-migration/components/MigrateCreate.php
@@ -20,7 +20,7 @@ use yii\base\View as view;
 
 >>> 该项目的作者没有正确区分大小写
 
-4.
+5.
 ```
 php yii backup/up
 ```
@@ -31,8 +31,6 @@ php yii backup/up
 ~~yii migrate --migrationPath=@mdm/admin/migrations~~
 
 ~~yii migrate~~
-
-5. 修改common/config/main-local.php，设置数据库信息
 
 ==========
 
