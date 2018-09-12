@@ -10,5 +10,11 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'wechat' => [
+            'class' => 'callmez\wechat\sdk\Wechat',
+            'appId' => '***',
+            'appSecret' => '***',
+            'token' => '***'
+        ],
     ],
 ];
