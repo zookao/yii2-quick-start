@@ -26,7 +26,8 @@
         "dmstr/yii2-adminlte-asset": "^2.1",
         "mdmsoft/yii2-admin": "~2.0",
         "e282486518/yii2-console-migration": "^1.3",
-        "pheme/yii2-settings": "*"
+        "pheme/yii2-settings": "*",
+        "callmez/yii2-wechat-sdk": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
