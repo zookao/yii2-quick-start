@@ -57,7 +57,7 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
-        'assetManager' => [
+        /*'assetManager' => [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
                     'sourcePath' => null,// do not publish the bundle
@@ -71,7 +71,7 @@ return [
                     ]
                 ],
             ],
-        ],
+        ],*/
     ],
     'params' => $params,
     'as access' => [
